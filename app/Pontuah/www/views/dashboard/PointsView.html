@@ -1,0 +1,56 @@
+<div class="card no-bottom">
+    <div class="card-header ch-alt">
+        <div class="media">
+            <div class="pull-left">
+                <img class="media-object img-small" firebase-src="{{data.img}}" alt="">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">{{data.name}}</h4>
+                <small>{{data.desc}}</small>
+            </div>
+        </div>
+
+        <ul class="actions">
+            <li class="dropdown" uib-dropdown="">
+                <a href="" uib-dropdown-toggle="" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    <i class="zmdi zmdi-more-vert"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                        <a ng-click="openInGeo(data.latitude, data.longitude)">Ver no mapa</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="pull-center m-b-15">
+    <h3>Você tem {{data.points}} pontos.</h3>
+</div>
+
+<div class="card no-bottom2">
+    <div class="card-header ch-alt">
+        <h2>Prêmios</h2>
+    </div>
+</div>
+
+<div class="card no-bottom" ng-repeat="reward in data.rewards | orderBy: 'points'">
+    <div class="card-body card-padding">
+        {{reward.name}} ?
+        <div class="pull-right">
+            {{reward.points}} pontos
+        </div>
+    </div>
+</div>
+
+<div class="card no-bottom" ng-show="!data.rewards || (data.rewards && data.rewards.lenght == 0)">
+    <div class="card-body card-padding">
+        <div class="pull-center">
+            Nenhum prêmio cadastrado.
+        </div>
+    </div>
+</div>
+
+

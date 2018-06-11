@@ -1,0 +1,164 @@
+@import "elements.less";
+
+body {
+	overflow-x: hidden;
+}
+
+.blur-box {
+  .blur(15px);
+}
+
+.blurmin-box {
+  .blur(5px);
+}
+
+.blurreset-box {
+	.blur(0px);
+}
+
+.background-image {
+	display: block;
+	min-width: 100vh;
+	min-height: 100vh;
+	left: 0;
+	position: fixed;
+	right: 0;
+	z-index: 0;
+	margin: -50px;
+}
+
+.with-header {
+  padding-top: 100px;
+}
+
+.without-header {
+  padding-top: 5px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for vh unit */
+  min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+
+.footer {
+  .box-shadow(0px 0px 10px 0px rgba(0,0,0,0.15));
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+}
+
+.map {
+  height: 300px;
+  width: 100%; 
+}
+
+
+.pull-center {
+  text-align: center;
+}
+
+.logo-header {
+  width: 100px;
+}
+
+.logo-min {
+  width: 150px;
+}
+
+.epc-title {
+  color: #ffffff;
+}
+
+.epc-content {
+  font-size: 4em;
+  color: #ffffff;
+}
+
+
+.btn-keyboard {
+  font-size: 3em !important;
+  width: 90%;
+}
+
+.btn-finish {
+  font-size: 2em !important;
+  width: 100%;
+}
+
+.input-keyboard {
+  height: 50px !important;
+  font-size: 1.8em !important;
+}
+
+
+.reward {
+  color: #000;
+}
+
+.reward .card-body {
+  color: #000;
+  &:hover, &:active {
+    background-color: #ccc; 
+  }
+}
+
+.reward-disabled {
+  background-color: #ccc !important;
+}
+
+.btn-purple {
+  color: #fff;
+  background-color: #5f0038;
+
+  &:hover:hover, &:active:active {
+    color: #fff;
+  }
+}
+
+.a-purple {
+  color: #5f0038;
+}
+
+.m-t-4 {
+  margin-top: 4px;
+}

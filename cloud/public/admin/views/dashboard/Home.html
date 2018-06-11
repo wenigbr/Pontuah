@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+<div class="panel-heading">
+	<img class="lc-logo logo-min p-t-10" ng-src="{{ 'bg-trans.png' | image }}"/>
+  </div>
+	<div class="panel-body">
+	Seja bem-vindo, {{user.data.name}}!<br> Nesta area de membros você pode alterar seus produtos, pontos e configurações!
+</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-4">
+	    <div class="epc-item bgm-orange">
+	    	<div class="epc-content">{{data.points ? data.points : '-'}}</div>
+	    	<div class="epc-title">Total de pontos distribuidos</div>
+	    </div>
+	</div>
+
+	<div class="col-sm-4">
+	    <div class="epc-item bgm-green">
+	    	<div class="epc-content">{{data.totalUsers ? data.totalUsers : '-'}}</div>
+	    	<div class="epc-title">Total de usuários</div>
+	    </div>
+	</div>
+
+	<div class="col-sm-4">
+	    <div class="epc-item bgm-pink">
+	    	<div class="epc-content">{{data.totalProducts ? data.totalProducts : '-'}}</div>
+	    	<div class="epc-title">Total de produtos resgatados</div>
+	    </div>	
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+	    <div class="card">
+	        <div class="card-header">
+	            <h2>Pontos distribuidos na ultima semana <small>Pontos distribuidos por dia na ultima semana</small></h2>
+	        </div>
+
+	        <div class="card-body">
+	            <!--div class="chart-edge">
+	                <div id="points-chart" data-line-chart="" class="flot-chart"></div>
+	            </div-->
+	            <div google-chart chart="pointsChart" style="{{pointsChart.cssStyle}}"/>
+	        </div>
+	    </div>
+	</div>
+	<div class="col-md-6">
+	    <div class="card">
+	        <div class="card-header">
+	            <h2>Visita de clientes na ultima semana<small>Clientes que receberam pontos na ultima semana</small></h2>
+	        </div>
+
+	        <div class="card-body">
+	        	<div google-chart chart="usersChart" style="{{usersChart.cssStyle}}"/>
+	        </div>
+	    </div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<div class="text-center bounceInLeft animated">
+	<div class="lc-block" ng-class="{ 'toggled': true }">
+		<div class="input-group m-b-10">
+			<img class="lc-logo" ng-src="{{ 'logo-min.png' | image }}"/>
+		</div>
+	    <div class="clearfix"></div>
+
+	    <div class="pull-center m-b-20">
+	    	Olá, preencha os campos abaixo para completar seu cadastro no Pontuah!
+	    </div>
+
+	    <div class="input-group m-b-20">
+	        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+	        <div class="fg-line">
+	            <input type="text" class="form-control" mask="999.999.999-99" ng-model="data.document" placeholder="CPF">
+	        </div>
+	    </div>
+
+	    <div class="input-group m-b-20">
+	        <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+	        <div class="fg-line">
+	            <input type="text" class="form-control" ng-model="data.email" placeholder="Email">
+	        </div>
+	    </div>
+
+	    <div class="input-group m-b-20">
+	        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+	        <div class="fg-line">
+	            <input type="password" class="form-control" ng-model="data.password" placeholder="Senha">
+	        </div>
+	    </div>
+
+	    <div class="input-group m-b-20">
+	        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+	        <div class="fg-line">
+	            <input type="password" class="form-control" ng-model="data.confirmpassword" placeholder="Confirmar senha">
+	        </div>
+	    </div>
+
+	    <div class="clearfix"></div>
+
+	    <a ng-click="createUser()" class="btn btn-login btn-purple btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
+			</div>
+</div>

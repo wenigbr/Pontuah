@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="card">
+            <div class="card-header ch-alt">
+                <h2>
+                    Olá {{userInfo.name}}, obrigado pela visita!
+                    <small>O que deseja fazer?</small>
+                </h2>
+            </div>
+            <div class="card-body card-padding row">
+                <div class="row pull-center col-md-12">
+                    <h2>Você possui {{userInfo.points.totalPoints}} pontos!</h2>
+                    <div ng-show="userInfo.points.added">Você recebeu {{userInfo.points.toAdd}} pontos pela visita de hoje!</div>
+                    <div ng-show="!userInfo.points.added">Você já recebeu seus pontos de visita hoje!</div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" ng-click="finish()" class="btn btn-finish m-b-20 btn-purple btn-lg waves-effect">Finalizar visita</button>
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="card no-bottom2">
+            <div class="card-header ch-alt">
+                <h2>
+                    Escolha algum prêmio para resgatar
+                </h2>
+            </div>
+        </div>
+
+        <div class="card no-bottom" ng-repeat="reward in user.establishment.rewards | orderBy: 'points'">
+            <a href="" class="reward" ng-click="getProduct(reward)">
+                <div class="card-body card-padding" ng-class="{'reward-disabled': userInfo.points.totalPoints < reward.points}">
+                    {{reward.name}} ?
+                    <div class="pull-right">
+                        {{reward.points}} pontos
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="card no-bottom" ng-show="!user.establishment.rewards || (user.establishment.rewards && user.establishment.rewards.lenght == 0)">
+            <div class="card-body card-padding">
+                <div class="pull-center">
+                    Nenhum prêmio cadastrado.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

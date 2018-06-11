@@ -1,0 +1,75 @@
+<div class="card">
+    <div class="card-header ch-alt">
+    	<h2>
+    		Olá, para começar digite seu CPF
+    		<small>Digite seu CPF para receber pontos e resgatar produtos.</small>
+    	</h2>
+    </div>
+    <div class="card-body card-padding row">
+		<form role="form" ng-submit="onSend()" class="ng-pristine ng-valid">
+		    <div class="row p-b-20">
+                <div class="col-md-10 col-sm-10 col-xs-8">
+		          <label for="exampleInputEmail1">CPF</label>
+		          <input type="text" class="form-control input-sm input-keyboard" ng-model="data.document" placeholder="Digite o CPF" mask="999.999.999-99" required readonly>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-4 p-t-20 pull-center">
+                    <button type="submit" class="btn btn-purple btn-finish m-t-4 waves-effect">Enviar</button>
+                </div>
+
+		    </div>
+
+            <div class="row pull-center col-md-12">
+                <div class="row m-b-10">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('1')" class="btn btn-keyboard btn-purple btn-lg waves-effect">1</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('2')" class="btn btn-keyboard btn-purple btn-lg waves-effect">2</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('3')" class="btn btn-keyboard btn-purple btn-lg waves-effect">3</button>
+                    </div>
+                </div>
+
+                <div class="row m-b-10">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('4')" class="btn btn-keyboard btn-purple btn-lg waves-effect">4</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('5')" class="btn btn-keyboard btn-purple btn-lg waves-effect">5</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('6')" class="btn btn-keyboard btn-purple btn-lg waves-effect">6</button>
+                    </div>
+                </div>
+
+                <div class="row m-b-10">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('7')" class="btn btn-keyboard btn-purple btn-lg waves-effect">7</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('8')" class="btn btn-keyboard btn-purple btn-lg waves-effect">8</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('9')" class="btn btn-keyboard btn-purple btn-lg waves-effect">9</button>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="appendTo('0')" class="btn btn-keyboard btn-purple btn-lg waves-effect">0</button>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <button type="button" ng-click="removeChar()" class="btn btn-keyboard btn-purple btn-lg waves-effect"><i class="zmdi zmdi-long-arrow-left"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+		</form>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="card">
+    <div class="card-header ch-alt">
+    	<h2>
+    		Configurações da conta
+    		<small>Aqui você pode alterar configurações relacionadas a conta.</small>
+    	</h2>
+    </div>
+    <div class="card-body card-padding">
+		<form role="form" class="ng-pristine ng-valid" ng-submit="onSave()">
+		    <div class="form-group row">
+		    	<div class="col-sm-3">
+				    <div class="fileinput fileinput-new" data-provides="fileinput" ng-init="logoImg = false">
+			    		<img class="fileinput-preview thumbnail logo-min" firebase-src="{{data.img}}" ng-show="!logoImg">
+		                <div class="fileinput-preview thumbnail" data-trigger="fileinput" ng-show="logoImg"></div>
+		                <div>
+		                    <span class="btn btn-purple btn-file waves-effect">
+		                        <span class="fileinput-new">Selecionar Imagem</span>
+		                        <span class="fileinput-exists" ng-click="logoImg = false">Mudar</span>
+		                        <input files-input ng-model="logoImg" type="file" name="...">
+		                    </span>
+		                    <a href="#" ng-click="logoImg = false" class="btn btn-purple fileinput-exists waves-effect" data-dismiss="fileinput">Remover</a>
+		                </div>
+		            </div>
+		        </div>
+
+		    	<div class="col-sm-9">
+				    <div class="form-group ">
+				        <label for="points">Nome do estabelecimento</label>
+				        <input type="text" id="points" class="form-control input-sm" ng-model="data.name" placeholder="Nome" required>
+				    </div>
+				    <div class="form-group ">
+				        <label for="points">Endereço</label>
+				        <input type="text" id="points" class="form-control input-sm" ng-model="data.address" placeholder="Endereço" required>
+				    </div>
+				    <div class="col-sm-12 p-0">
+					    <div class="col-sm-5 p-0">
+						    <div class="form-group ">
+						        <label for="points">Latitude</label>
+						        <input type="text" id="points" class="form-control input-sm" ng-model="data.latitude" placeholder="Latitude">
+						    </div>
+						</div>
+					    <div class="col-sm-5 p-0">
+						    <div class="form-group ">
+						        <label for="points">Longitude</label>
+						        <input type="text" id="points" class="form-control input-sm" ng-model="data.longitude" placeholder="Longitude">
+						    </div>
+					    </div>
+				    </div>
+				</div>
+		    </div>
+
+
+
+
+		    <div class="form-group ">
+		        <label for="points">Descrição</label>
+		        <textarea class="form-control input-sm" placeholder="Descrição" ng-model="data.desc" rows="5" required></textarea>
+		    	<small>Digite uma breve descrição do estabelecimento!</small>
+		    </div>
+		    <div class="form-group ">
+		        <label for="points">Quantidade de pontos por visita</label>
+		        <input type="number" id="points" class="form-control input-sm" ng-model="data.addPoints" placeholder="Pontos" required>
+		    	<small>Digite acima a quantidade de pontos que o cliente vai ganhar a cada visita!</small>
+		    </div>
+
+		    <button type="submit" class="btn btn-purple btn-sm m-t-10 waves-effect">Salvar</button>
+		</form>
+    </div>
+</div>

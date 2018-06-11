@@ -1,0 +1,206 @@
+@import "elements.less";
+
+html, body {
+	min-height: 100%;
+	background-color: #333;
+}
+
+.main-content {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.blur-box {
+	.blur(15px);
+}
+
+.blurreset-box {
+	.blur(0px);
+}
+
+/* Standard syntax */
+@keyframes formup {
+    0%   {
+    	.translate(0, 100%);
+    	.opacity(0);
+    	.blur(15px);
+    }
+    100% {
+    	.translate(0, 0);
+    	.opacity(1);
+    	.blur(0);
+    }
+}
+
+.logo {
+	position: relative;
+	z-index: 1;
+	width: 450px;
+	.animation-name(formup);
+	.animation-duration(2s);
+	margin: 20px;
+}
+
+img.displayed {
+    display: block;
+    margin: 0 auto;
+    clear: right;
+}
+
+/* Form */
+.form {
+	.animation-name(formup);
+	.animation-duration(2s);
+
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	margin: 0 auto 100px;
+	padding: 30px;
+	.border-radius(3px, 3px, 3px, 3px);
+	text-align: center;
+	.box-shadow(0px 0px 150px 0px rgba(0,0,0,0.75));
+	.border-radius(60px);
+    border-top: solid #00aaff;
+    border-right: solid #00aaff;
+}
+
+.form .thumbnail {
+	background: #333;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 30px;
+	padding: 50px 30px;
+	.border-radius(100%,100%,100%,100%);
+	box-sizing: border-box;
+}
+
+.form .thumbnail img {
+	display: block;
+	width: 100%;
+}
+
+.form .thumbnail span {
+	color: #fff;
+	font-size: 3em;
+}
+
+.form input {
+	outline: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	.border-radius(3px, 3px, 3px, 3px);
+	box-sizing: border-box;
+	font-size: 14px;
+	&:hover, &:active {
+		.box-shadow(0px 0px 20px 0px rgba(0,0,0,0.3));
+		.scale(1.01);
+	}
+
+	&:leave {
+		.scale(1);
+	}
+}
+
+.form .checkbox input {
+	width: auto;
+}
+
+.form button {
+	outline: 0;
+	background: #333;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	.border-radius(3px, 3px, 3px, 3px);
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+	.transition();
+
+	&:hover {
+		.box-shadow(0px 0px 20px 0px rgba(0,0,0,0.75));
+		.scale(1.05);
+	}
+
+	&:leave {
+		.scale(1);
+	}
+}
+
+.form .message {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}
+
+.form .message a {
+	color: #EF3B3A;
+	text-decoration: none;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for vh unit */
+  min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	background-color: rgba(0, 0, 0, 0.75);
+	.box-shadow(0px 0px 30px 0px rgba(0,0,0,0.75));
+    color: #ccc;
+    font-family: "Arial";
+    font-size: 1.3em;
+    line-height: 60px;
+}
+
+.float-background {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+}

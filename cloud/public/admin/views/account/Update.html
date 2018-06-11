@@ -1,0 +1,36 @@
+<div class="text-center bounceInLeft animated">
+	<div class="lc-block" ng-class="{ 'toggled': true }">
+		<div class="input-group m-b-10">
+			<img class="lc-logo" ng-src="{{ 'logo-min.png' | image }}"/>
+		</div>
+	    <div class="clearfix"></div>
+
+		<div class="input-group m-b-20 lc-text">
+		    <h4>Ok, estamos quase lá.</h4>
+		    Para podermos continuar, informe os dados abaixo.
+		</div>
+		
+		<div class="input-group m-b-20" ng-show="!user.data.name">
+	        <span class="input-group-addon"><i class="zmdi zmdi-account-box"></i></span>
+	        <div class="fg-line">
+	            <input type="text" ng-model="data.name" class="form-control" placeholder="Nome completo">
+	        </div>
+	    </div>
+
+	    <div class="input-group m-b-20" ng-show="!user.data.document">
+	        <span class="input-group-addon"><i class="zmdi zmdi-account-box"></i></span>
+	        <div class="fg-line">
+	            <input type="text" ng-model="data.document" class="form-control" placeholder="CPF" mask="999.999.999-99">
+	        </div>
+	    </div>
+
+	    <div class="input-group m-b-20" ng-show="!user.data.birthday">
+	        <span class="input-group-addon"><i class="zmdi zmdi-cake"></i></span>
+	        <div class="fg-line">
+	            <input type="text" ng-model="data.birthday" class="form-control" placeholder="Data de nascimento" mask="39/19/9999">
+	        </div>
+	    </div>
+
+	    <a ng-click="update()" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+
+<div class="sidebar-inner c-overflow">    
+    <div class="profile-menu" ng-show="logged">
+        <a href="">
+            <div class="profile-info"> 
+                Bem vindo, {{user.data.name}}
+            </div>
+        </a>
+    </div>
+    <ul class="main-menu">
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.home()" ng-click="MainCtrl.sidebarStat($event)"><i class="zmdi zmdi-home"></i> Inicio</a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.profile()" ng-click="MainCtrl.sidebarStat($event)"><i class="zmdi zmdi-account-box"></i> Meu perfil</a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.points.list()" ng-click="MainCtrl.sidebarStat($event)"><i class="zmdi zmdi-star"></i> Pontos</a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.locations.list()" ng-click="MainCtrl.sidebarStat($event)"><i class="zmdi zmdi-pin"></i> Locais</a>
+        </li>
+        <li ui-sref-active="active">
+            <a ng-click="MainCtrl.sidebarStat($event, true)"><i class="zmdi zmdi-caret-left-circle"></i> Sair</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="ismobile" ng-app="MainApp" ng-controller="MainController as MainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pontuah!</title>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        
+        <!-- Vendor -->
+            <!-- Bootstrap -->
+                <link href="assets/vendor/bootstrap/css/bootstrap-sweet-alert.css" rel="stylesheet">
+            <!-- #Bootstrap -->
+
+            <!-- Angular -->
+                <link href="assets/vendor/angular/css/angular-growl.min.css" rel="stylesheet">
+                <link href="assets/vendor/angular/css/angular-loading-bar.min.css" rel="stylesheet">
+                <link href="assets/vendor/angular/css/angular-ng-table.min.css" rel="stylesheet">
+            <!-- #Angular -->
+
+            <!-- Material-design-iconic-font -->
+                <link href="assets/vendor/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
+            <!-- #Material-design-iconic-font -->
+
+            <!-- Animate.css -->
+                <link href="assets/vendor/animate.css/css/animate.min.css" rel="stylesheet">
+            <!-- #Animate.css -->
+
+            <!-- Jquery -->
+                <link href="assets/vendor/jquery/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+            <!-- #Jquery -->
+        <!-- #Vendor -->
+
+
+        <!-- Assets -->
+            <!-- CSS -->
+                <link href="assets/css/main.css" rel="stylesheet">
+                <link href="assets/css/app.min.1.css" rel="stylesheet">
+                <link href="assets/css/app.min.2.css" rel="stylesheet">
+            <!-- #CSS -->
+            
+            <!-- Font -->
+                <link href="assets/fonts/flaticon.css" rel="stylesheet">
+            <!-- #Font -->
+        <!-- #Assets -->
+
+        <!-- Vendor -->
+            <!-- Jquery -->
+                <script src="assets/vendor/jquery/js/jquery.1.11.3.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/jquery/js/jquery.nicescroll.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/jquery/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+            <!-- #Jquery -->
+
+            <!-- Underscore -->
+                <script src="assets/vendor/underscore/js/underscore.min.js" type="text/javascript"></script>
+            <!-- #Underscore -->
+
+            <!-- Angular -->
+                <script src="assets/vendor/angular/js/angular.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-loader.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-sanitize.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-ui-router.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-growl.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-animate.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-ui-bootstrap.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-loading-bar.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-ng-table.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-ng-touch.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-swipe.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-ng-infinitescroll.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-restangular.min.js" type="text/javascript"></script>
+                <script src="assets/vendor/angular/js/angular-ng-mask.min.js" type="text/javascript"></script>
+            <!-- #Angular -->
+
+            <!-- Firebase -->
+                <script src="assets/vendor/firebase/js/firebase.js" type="text/javascript"></script>
+                <script src="assets/vendor/firebase/js/angularfire.min.js" type="text/javascript"></script>
+            <!-- #Firebase -->
+
+            <!-- Bootstrap -->
+                <script src="assets/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+            <!-- #Bootstrap -->
+
+            <!-- Waves -->
+                <script src="assets/vendor/waves/src/js/waves.js" type="text/javascript"></script>
+            <!-- #Waves -->
+        <!-- #Vendor -->
+
+        <!-- Assets -->
+            <!-- JS -->
+                <!-- Common -->
+                    <script src="assets/js/common/Class.js" type="text/javascript"></script>
+                    <script src="assets/js/common/EventsManager.js" type="text/javascript"></script>
+                    <script src="assets/js/common/Utils.js" type="text/javascript"></script>
+                <!-- #Common -->
+
+                <!-- Extensions -->
+                    <script src="assets/js/extensions/Array.js" type="text/javascript"></script>
+                    <script src="assets/js/extensions/Table.js" type="text/javascript"></script>
+                    <script src="assets/js/extensions/String.js" type="text/javascript"></script>
+                <!-- #Extensions -->
+
+                <!-- Componets -->
+                    <!-- Account -->
+                        <script src="assets/js/components/account/Account.js" type="text/javascript"></script>
+                    <!-- #Account -->
+
+                    <!-- Dashboard -->
+                        <script src="assets/js/components/dashboard/Dashboard.js" type="text/javascript"></script>
+                    <!-- #Dashboard -->
+                <!-- #Componets -->
+
+                <script src="assets/js/Main.js" type="text/javascript"></script>
+                <script src="assets/js/Utils.js" type="text/javascript"></script>
+                <script src="assets/js/Services.js" type="text/javascript"></script>
+                <script src="assets/js/Directives.js" type="text/javascript"></script>
+            <!-- #JS -->
+        <!-- #Assets -->
+
+        <!-- Start -->
+        <script type="text/javascript">
+                   // Initialize Firebase
+                    var config = {
+                        apiKey: "AIzaSyAPYdjZZgK-j1PHTrOpOAREWwlz_OnQ4CQ",
+                        authDomain: "pontuah-ee5a0.firebaseapp.com",
+                        databaseURL: "https://pontuah-ee5a0.firebaseio.com",
+                        projectId: "pontuah-ee5a0",
+                        storageBucket: "pontuah-ee5a0.appspot.com",
+                        messagingSenderId: "759228227647"
+                    };
+
+                    firebase.initializeApp(config);
+                    console.log("called init");
+                    Main.Init();
+                    // Call app init
+        </script>
+    </head>
+    <body ng-swipe-right="MainCtrl.swipeMenu($event, true)", ng-swipe-left="MainCtrl.swipeMenu($event, false)">
+        <header id="header" data-current-skin="{{MainCtrl.currentSkin}}" ng-include="'template/header' | view" ng-controller="HeaderController as hctrl" ng-if="MainCtrl.showHeader"></header>
+        <section id="main" ng-class="{'with-header': MainCtrl.showHeader, 'without-header': !MainCtrl.showHeader}">
+            <aside id="sidebar" ng-include="'template/sidebar-left' | view" ng-class="{ 'toggled': MainCtrl.sidebarToggle.left === true }" ng-show="logged"></aside>
+            <section id="content">
+                <div class="container" ng-swipe-down="MainCtrl.updateContent($event)">
+                    <div class="block-header" ng-show="MainCtrl.showCurrentPage" ng-class="{'toggled': true}">
+                        <h2>{{pageName}}</h2>
+                    </div>
+
+                    <div ui-view></div>
+
+                </div>
+            </section>
+        </section>
+        <footer id="footer" ng-if="false" ng-include="'template/footer' | view"></footer>
+
+        <div growl limit-messages="5"></div>
+        <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAPYdjZZgK-j1PHTrOpOAREWwlz_OnQ4CQ"></script>
+    </body>
+</html>

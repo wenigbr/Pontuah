@@ -1,0 +1,40 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyAPYdjZZgK-j1PHTrOpOAREWwlz_OnQ4CQ",
+      "PLAY_SERVICES_VERSION": "12.0.0",
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.0",
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    },
+    "cordova-plugin-buildinfo": {
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    },
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    },
+    "cordova-plugin-customurlscheme": {
+      "URL_SCHEME": "com.unitdev.pontuah",
+      "ANDROID_SCHEME": " ",
+      "ANDROID_HOST": " ",
+      "ANDROID_PATHPREFIX": "/",
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.unitdev.pontuah"
+    }
+  },
+  "dependent_plugins": {}
+}

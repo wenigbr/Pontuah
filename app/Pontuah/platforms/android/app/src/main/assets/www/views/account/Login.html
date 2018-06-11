@@ -1,0 +1,41 @@
+<div class="text-center bounceInLeft animated">
+	<form>
+	<div class="lc-block" ng-class="{'toggled': true}">
+		<div class="input-group">
+			<img class="lc-logo" ng-src="{{ 'logo-min.png' | image }}"/>
+		</div>
+	    <div class="clearfix"></div>
+
+	    <div class="input-group m-b-20">
+	        <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
+	        <div class="fg-line">
+	            <input type="text" ng-model="data.username" class="form-control" placeholder="Email">
+	        </div>
+	    </div>
+
+	    <div class="input-group m-b-20">
+	        <span class="input-group-addon"><i class="zmdi zmdi-lock"></i></span>
+	        <div class="fg-line">
+	            <input type="password" ng-model="data.password" class="form-control" placeholder="Senha">
+	        </div>
+	    	<div class="pull-right">
+	  			<a ui-sref="account.forget()" class="a-purple">Esqueceu a senha?</a>
+	    	</div>
+	    </div>
+
+
+	    <button type="submit" ng-click="login(data.username, data.password)" class="btn btn-login btn-purple btn-float"><i class="zmdi zmdi-arrow-forward"></i></button>
+
+
+	    <div class="login-icons">
+			<a ng-click="loginWithFacebook()"><i class="zmdi zmdi-hc-3x zmdi-facebook-box a-purple"></i></a>
+			<a ng-click="loginWithGoogle()"><i class="zmdi zmdi-hc-3x zmdi-google-plus-box a-purple"></i></a>
+		</div>
+
+		<div class="pull-right lc-createacc">
+	  		<a ui-sref="account.register()" class="a-purple">Criar conta?</a>
+		</div>
+
+	</div>
+	</form>
+</div>

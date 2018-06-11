@@ -1,0 +1,33 @@
+<div class="sidebar-inner c-overflow">    
+    <div class="profile-menu" ng-show="logged">
+        <a href="">
+            <div class="profile-info"> 
+                Bem vindo, {{user.data.name}}
+            </div>
+        </a>
+    </div>
+    <ul class="main-menu">
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.home()" ng-click="MainCtrl.sidebarStat($event)"><i class="zmdi zmdi-home"></i> Inicio</a>
+        </li>
+        <li ui-sref-active="active">
+            <a ui-sref="dashboard.clientvisit()" ng-click="MainCtrl.sidebarStat($event)"><i class="zmdi zmdi-account-box"></i> Visita de cliente</a>
+        </li>
+        <li class="sub-menu" ng-class="{ 'active toggled': MainCtrl.$state.includes('products') }">
+            <a toggle-submenu><i class="zmdi zmdi-shopping-cart"></i> Produtos</a>
+            <ul>
+                <li><a ui-sref-active="active" ui-sref="dashboard.products.manager()" ng-click="MainCtrl.sidebarStat($event)">Gerenciador de produtos</a></li>
+            </ul>
+        </li>
+
+        <li class="sub-menu" ng-class="{ 'active toggled': MainCtrl.$state.includes('config') }">
+            <a toggle-submenu><i class="zmdi zmdi-shopping-cart"></i> Configurações</a>
+            <ul>
+                <li><a ui-sref-active="active" ui-sref="dashboard.config()" ng-click="MainCtrl.sidebarStat($event)">Configurações da conta</a></li>
+            </ul>
+        </li>
+        <li ui-sref-active="active">
+            <a ng-click="MainCtrl.sidebarStat($event, true)"><i class="zmdi zmdi-caret-left-circle"></i> Sair</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="pull-right">
+			<button class="btn btn-default btn-lg" ng-click="update()"><i class="zmdi zmdi-rotate-right" ng-class="{'zmdi-hc-spin': updating}"></i></button>
+		</div>
+	</div>
+</div>
+<div>
+	<div class="card no-bottom" ng-repeat="item in data" ui-sref="dashboard.locations.view({id: item.id})">
+	    <div class="card-body card-padding">
+			<div class="media">
+			    <div class="pull-left">
+			       	<img class="media-object img-small" firebase-src="{{item.img}}" alt="">
+			    </div>
+			    <div class="media-body">
+			        <h4 class="media-heading">{{item.name}}</h4>
+			        <small>{{item.desc}}</small>
+			    </div>
+			</div>
+	    </div>
+	</div>
+</div>
+
